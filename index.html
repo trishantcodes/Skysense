@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkySense — Advanced Weather</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="nav">
+      <h1 class="logo">SkySense</h1>
+      <nav class="nav-right">
+        <input id="cityInput" type="search" placeholder="Search city (e.g. London)" aria-label="Search city" />
+        <button id="searchBtn" title="Search">Search</button>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="weather-visual" id="visual">
+        <!-- dynamic visual elements inserted/controlled by JS -->
+        <div class="sun" id="sun" aria-hidden="true"></div>
+
+        <div class="cloud cloud-1" id="cloud1" aria-hidden="true"></div>
+        <div class="cloud cloud-2" id="cloud2" aria-hidden="true"></div>
+
+        <div class="raindrops" id="raindrops" aria-hidden="true"></div>
+        <div class="snow" id="snow" aria-hidden="true"></div>
+
+        <div class="overlay-gradient"></div>
+      </div>
+
+      <div class="info">
+        <h2 id="cityName">New Delhi</h2>
+        <p class="temp" id="temperature">--°C <span id="feels"></span></p>
+        <p class="desc" id="desc">Type a city and press Search</p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="label">Humidity</div>
+            <div id="humidity">--%</div>
+          </div>
+          <div class="stat">
+            <div class="label">Precipitation</div>
+            <div id="precip">--%</div>
+          </div>
+          <div class="stat">
+            <div class="label">Wind</div>
+            <div id="wind">-- km/h</div>
+          </div>
+          <div class="stat">
+            <div class="label">AQI</div>
+            <div id="aqi">--</div>
+          </div>
+        </div>
+
+        <div class="meta">
+          <small id="updated">Last updated: --</small>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Built with HTML • CSS • JavaScript • Open-Meteo</small>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
